@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: rgba(245, 245, 245, 0.808);
+}
+.container{
+    position: relative;
+}
+/* navbar start */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(84, 92, 92);
+    height: 80px;
+    align-items: center;
+    z-index: 9999;
+}
+
+nav .logo a{
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.911);
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    width: 60%;
+    justify-content: space-between;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.911);
+}
+
+nav ul li a:hover{
+    color: aquamarine;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+/* tablet size */
+@media screen and (max-width: 810px){
+    nav ul {
+        width: 70%;
+    }
+}
+
+/* mobile size */
+@media screen and (max-width: 576px){
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+}
+/* navbar end */
+
+/* deskripsi start */
+.deskripsi{
+    margin-top: 80px;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "picture sinopsis sinopsis"
+    "footer footer footer";
+    grid-gap: 20px;
+    border-top: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.header-deskripsi{grid-area: header;}
+.picture{grid-area: picture;}
+.sinopsis{grid-area: sinopsis;}
+.trailer{grid-area: trailer;}
+.footer{grid-area: footer;}
+
+.header-deskripsi{
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.picture{
+    margin-left: 20px;
+}
+
+.picture img{
+    height: 100%;
+    width: 100%;
+}
+
+.sinopsis{
+    display: grid;
+    grid-template-areas: 
+    "rating rating rating"
+    "story story story"
+    "trailer trailer trailer";  
+    align-content: flex-start;
+}
+
+.star{grid-area:rating ;}
+.story{grid-area: story;}
+.trailer{grid-area: trailer;}
+
+.story{
+    margin-top: 20px;
+    line-height: 19px;
+}
+.star img{
+    width: 20px;
+    height: 20px;
+  }
+
+/* .trailer{
+    display: grid;
+    margin-top: -10px;
+    justify-items: center;
+} */
+
+.footer{
+    text-align: center;
+    border: 1px solid black;
+}
+/* deskripsi end */
